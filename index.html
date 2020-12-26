@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Advanced Bank Loan Prediction</h2>
+            
+            </select>            
+            <h3>What is your gender?</h3><br><select name="Gender" id="Gender" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            </select>            
+            <h3>What is your marital status?</h3><br><select name="Married" id="Married" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            
+            </select>                            
+            <h3>Are You self employed?</h3><br><select name="Self_Employed" id="Self_Employed" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>  
+            </select>
+           
+            </select>                                      
+            <h3>Are You a graduate?</h3><br><select name="Education" id="Education" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>                  
+            </select>
+
+            <h3>How many people are dependant on you?</h3>
+            <input id="Dependents_1" name="Dependents_1" type="number ">
+
+            <h3>What is your income?</h3>
+            <input id="ApplicantIncome" name="ApplicantIncome" type="number ">
+            
+            <h3>What is the income of coapplicant?</h3>
+            <input id="CoapplicantIncome" name="CoapplicantIncome" type="number ">            
+
+            <h3>Amount of loan request?</h3>
+            <input id="LoanAmount" name="LoanAmount" type="number "> 
+ 
+            <h3>Loan Amount Term (in Days)?</h3>
+            <input id="Loan_Amount_Term" name="Loan_Amount_Term" type="number ">  
+
+            </select>                                      
+            <h3>All debts repaid or not ?(1=paid, 0=not paid)</h3><br><select name="Credit_History" id="Credit_History" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>                  
+            </select>
+ 
+            </select>           
+            <h3>Select the type of location</h3><br><select name="Property_Area_Semiurban" id="Property_Area_Semiurban" required="required">
+                <option value="Rural">Rural</option>
+                <option value="Semiurban">Semiurban</option>            
+                <option value="Urban">Urban</option> 
+            </select>
+                            
+            <br><br><button id="sub" type="submit ">Predict Loan Status for given criterias</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_texts }}<h3>
+    </div>
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #Gender {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #Gender:hover {
+            background-color: coral;
+        }
+        #Married {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Married:hover {
+            background-color: coral;
+        }
+        #Self_Employed {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Self_Employed:hover {
+            background-color: coral;
+        }
+        #Education {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Education:hover {
+            background-color: darkcyan;
+        }
+        #Dependents_1 {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #ApplicantIncome {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #CoapplicantIncome {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #LoanAmount {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #Loan_Amount_Term {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #Credit_History {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Credit_History:hover {
+            background-color: darkcyan;
+        }
+        #Property_Area_Semiurban {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #Property_Area_Semiurban:hover {
+            background-color: darkcyan;
+        }
+    </style>
+
+
+    
+</body>
+
+</html>
