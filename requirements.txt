@@ -199,7 +199,6 @@ cycler==0.10.0
 cryptography==2.9.2
 comtypes==1.1.7
 colorama==0.4.3
-clyent==1.2.2
 cloudpickle==1.5.0
 click==7.1.2
 chardet==3.0.4
