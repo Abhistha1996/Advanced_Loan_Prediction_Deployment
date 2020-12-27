@@ -58,7 +58,6 @@ scipy==1.5.4
 scikit-learn==0.23.2
 scikit-image==0.16.2
 ruamel-yaml==0.15.87
-Rtree==0.9.4
 rope==0.17.0
 requests==2.24.0
 regex==2020.6.8
