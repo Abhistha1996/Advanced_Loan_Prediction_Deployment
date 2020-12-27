@@ -134,7 +134,6 @@ msgpack==1.0.0
 mpmath==1.1.0
 more-itertools==8.4.0
 mock==4.0.2
-mkl-service==2.3.0
 mkl-random==1.1.1
 mkl-fft==1.1.0
 mistune==0.8.4
