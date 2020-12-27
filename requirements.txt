@@ -197,9 +197,6 @@ cytoolz==0.10.1
 Cython==0.29.21
 cycler==0.10.0
 cryptography==2.9.2
-conda-verify==3.4.2
-conda-package-handling==1.7.0
-conda-build==3.18.11
 comtypes==1.1.7
 colorama==0.4.3
 clyent==1.2.2
