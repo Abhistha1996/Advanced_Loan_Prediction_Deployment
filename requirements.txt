@@ -215,7 +215,6 @@ bkcharts==0.2
 bitarray==1.4.0
 beautifulsoup4==4.9.1
 bcrypt==3.1.7
-basemap==1.2.1
 backports.weakref==1.0.post1
 backports.tempfile==1.0
 backports.shutil-get-terminal-size==1.0.0
