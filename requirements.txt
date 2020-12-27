@@ -68,7 +68,6 @@ QDarkStyle==2.8.1
 pyzmq==19.0.1
 PyYAML==5.3.1
 pywinpty==0.5.7
-pywin32==227
 pywin32-ctypes==0.2.0
 PyWavelets==1.1.1
 pytz==2020.1
